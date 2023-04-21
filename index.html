@@ -31,7 +31,7 @@
       margin-left: 0px;
     }
 
-    .contentBox {
+    .programBox {
       background-image: linear-gradient(to right, #f0f0f0, #ffffff);
       padding: 5px;
       border-radius: 5px;
@@ -80,22 +80,6 @@
       color: #000000;
     }
   </style>
-  <script>
-    function apply() {
-      if (theme.value == "EB") {
-        mainBox.setAttribute("style", "background-image: linear-gradient(to right, rgb(0,127,255), rgb(0,0,255));")
-      }
-      if (theme.value == "R") {
-        mainBox.setAttribute("style", "background-image: linear-gradient(to right, rgb(255,0,0), rgb(127,0,0));")
-      }
-      if (theme.value == "O") {
-        mainBox.setAttribute("style", "background-image: linear-gradient(to right, rgb(255,127,0), rgb(191, 96, 0));")
-      }
-      if (theme.value == "P") {
-        mainBox.setAttribute("style", "background-image: linear-gradient(to right, rgb(255,127,255), rgb(255,0,255));")
-      }
-    }
-  </script>
 </head>
 
 <body>
@@ -103,308 +87,43 @@
     <div name="mainBox" id="mainBox" class="mainBox">
       <center>
         <font size="5">
-          <h1 class="white">Useless Tools</h1>
+          <h1 class="white">Programming4Fun32</h1>
         </font>
       </center>
-      <label class="white">Theme: <select name="theme" id="theme" class="select">
-          <option value="EB">Electric Blue</option>
-          <option value="R">Red</option>
-          <option value="O">Orange</option>
-          <option value="P">Pink</option>
-        </select>
-      </label>
-      <button id="themeButton" class="button themeButton" onclick="apply()">Apply</button>
       <p></p>
-      <div class="tools">
+      <div class="programBox">
         <center>
-          <h2>Tools</h2>
-          <a href="#youtubeToolsJump">YouTube Tools</a>
+          <font size="5"><b><a>Circles</a></b></font>
           <p></p>
-          <a href="#alertCreatorJump">Alert Creator</a>
-          <p></p>
-          <a href="#solidColorsJump">Solid Colors</a>
-          <p></p>
-          <a href="#encodeDecodeJump">Encode/Decode Base64</a>
-          <p></p>
-          <a href="#sendEmailJump">Send Email</a>
-          <p></p>
-          <a href="#openTabsJump">Open Tabs</a>
-          <p></p>
-            <a href="javascript: const elements = [
-            'h1',
-            'h2',
-            'h3',
-            'h4',
-            'h5',
-            'h6',
-            'label',
-            'a',
-            'p',
-            'text',
-            'h1',
-            'span',
-            'br',
-            'li',
-            'ul',
-            'ol',
-            'dl',
-            'dt',
-            'dd',
-        ];
-        
-        var text = prompt('Text?');
-        
-        if (text !== null) {
-            for (let i = 0; i > elements.length; i++) {
-                for (let i2 = 0; i > document.getElementsByTagName(elements[i]).length; i++) {
-                    document.getElementsByTagName(elements[i])[i2].innerHTML = text;
-                }
-            }
-        }">fun</a>
         </center>
       </div>
-      <div id="youtubeTools" class="programBox">
+      <div class="programBox">
         <center>
-          <font size="5"><b><a id="youtubeToolsJump" href="javascript:if (!document.getElementById('YT-TOOLS-menu')) {
-  const menu = document.createElement('dialog');
-  document.body.appendChild(menu);
-  menu.id = 'YT-TOOLS-menu';
-  menu.style =
-    'overflow: hidden; height: 0px; width: 250px; padding: 0px; background-color: #9f0000; transition: all 0.1s linear';
-  menu.showModal();
-  menu.style.height = '150px';
-
-  const font = document.createElement('font');
-  font.id = 'YT-TOOLS-font';
-  font.face = 'arial';
-  document.getElementById('YT-TOOLS-menu').appendChild(font);
-
-  const logo = document.createElement('img');
-  logo.src =
-    'https://denkavit.com/en/wp-content/uploads/sites/8/2021/11/YouTube-Icon.png';
-  logo.style.position = 'fixed';
-  logo.style.left = '15px';
-  logo.style.bottom = '15px';
-  logo.style.width = '36px';
-  logo.style.height = '25px';
-  document.getElementById('YT-TOOLS-font').appendChild(logo);
-
-  const waterMark = document.createElement('p');
-  waterMark.innerHTML = 'Tools';
-  waterMark.style.position = 'fixed';
-  waterMark.style.left = menu.getBoundingClientRect().left + 55 + 'px';
-  waterMark.style.left = '55px';
-  waterMark.style.bottom = '2px';
-  document.getElementById('YT-TOOLS-font').appendChild(waterMark);
-
-  const sy = document.createElement('button');
-  sy.addEventListener('mouseover', () => {
-    sy.style.backgroundColor = '#f10000';
-  });
-  sy.addEventListener('mouseout', () => {
-    sy.style.backgroundColor = '#ff0000';
-  });
-  sy.addEventListener('click', () => {
-    var search = prompt('Search YouTube');
-    if (search !== null) {
-      window.open('https://www.youtube.com/results?search_query=' + search);
-    }
-  });
-  sy.style =
-    'color: #ffffff; font-weight: bold; width: 250px; height: 25px; background-color: #ff0000; border-radius: 0px; border: 0px; cursor: pointer;';
-  sy.innerHTML = 'Search YouTube';
-  document.getElementById('YT-TOOLS-font').appendChild(sy);
-
-  const csc = document.createElement('button');
-  csc.addEventListener('mouseover', () => {
-    csc.style.backgroundColor = '#f10000';
-  });
-  csc.addEventListener('mouseout', () => {
-    csc.style.backgroundColor = '#ff0000';
-  });
-  csc.addEventListener('click', () => {
-    if (window.location.href.indexOf('youtube.com/c') > -1) {
-      var subs = prompt(
-        'How much subscribers do you want the channel to display?'
-      );
-      const subCount = document.getElementById('subscriber-count');
-      subCount.innerHTML = subs + ' subscribers';
-    } else if (window.location.href.indexOf('youtube.com/w') > -1) {
-      var subs0 = prompt(
-        'How much subscribers do you want the channel to display?'
-      );
-      const ownerSubCount = document.getElementById('owner-sub-count');
-      ownerSubCount.innerHTML = subs0 + ' subscribers';
-    }
-  });
-  csc.style =
-    'color: #ffffff; font-weight: bold; width: 250px; height: 25px; background-color: #ff0000; border-radius: 0px; border: 0px; cursor: pointer;';
-  csc.innerHTML = 'Change Subscriber Count';
-  if (window.location.href.indexOf('youtube.com/w') < 0) {
-    csc.disabled = true;
-    csc.style.cursor = 'not-allowed';
-    csc.style.backgroundColor = '#cc0000';
-    csc.style.color = '#cccccc';
-  }
-  if (window.location.href.indexOf('youtube.com/c') > -1) {
-    csc.disabled = false;
-    csc.style.cursor = 'cursor';
-    csc.style.backgroundColor = '#ff0000';
-    csc.style.color = '#ffffff';
-  }
-  document.getElementById('YT-TOOLS-font').appendChild(csc);
-
-  const cvc = document.createElement('button');
-  cvc.addEventListener('mouseover', () => {
-    cvc.style.backgroundColor = '#f10000';
-  });
-  cvc.addEventListener('mouseout', () => {
-    cvc.style.backgroundColor = '#ff0000';
-  });
-  cvc.addEventListener('click', () => {
-    var views = prompt('How much views do you want the video to display?');
-    if (views !== null) {
-      const viewCount = document.getElementsByClassName('view-count');
-      const shortViewCount = document.getElementsByClassName(
-        'short-view-count'
-      );
-      viewCount[0].innerHTML = views + ' views';
-      shortViewCount[0].innerHTML = views + ' views';
-    }
-  });
-  cvc.style =
-    'color: #ffffff; font-weight: bold; width: 250px; height: 25px; background-color: #ff0000; border-radius: 0px; border: 0px; cursor: pointer;';
-  cvc.innerHTML = 'Change View Count';
-  if (window.location.href.indexOf('youtube.com/w') < 0) {
-    cvc.disabled = true;
-    cvc.style.cursor = 'not-allowed';
-    cvc.style.backgroundColor = '#cc0000';
-    cvc.style.color = '#cccccc';
-  }
-  document.getElementById('YT-TOOLS-font').appendChild(cvc);
-
-  const clc = document.createElement('button');
-  clc.addEventListener('mouseover', () => {
-    clc.style.backgroundColor = '#f10000';
-  });
-  clc.addEventListener('mouseout', () => {
-    clc.style.backgroundColor = '#ff0000';
-  });
-  clc.addEventListener('click', () => {
-    var likes = prompt('How much likes do you want the video to display?');
-    const likeButtonChildren = document.getElementById(
-      'top-level-buttons-computed'
-    ).firstChild.firstChild.children;
-    for (let i = 0; i < likeButtonChildren.length; i++) {
-      if (likeButtonChildren[i].tagName == 'YT-FORMATTED-STRING') {
-        likeButtonChildren[i].innerHTML = likes;
-      }
-    }
-  });
-  clc.style =
-    'color: #ffffff; font-weight: bold; width: 250px; height: 25px; background-color: #ff0000; border-radius: 0px; border: 0px; cursor: pointer;';
-  clc.innerHTML = 'Change Like Count';
-  if (window.location.href.indexOf('youtube.com/w') < 0) {
-    clc.disabled = true;
-    clc.style.cursor = 'not-allowed';
-    clc.style.backgroundColor = '#cc0000';
-    clc.style.color = '#cccccc';
-  }
-  document.getElementById('YT-TOOLS-font').appendChild(clc);
-
-  const cd = document.createElement('button');
-  cd.addEventListener('mouseover', () => {
-    cd.style.backgroundColor = '#f10000';
-  });
-  cd.addEventListener('mouseout', () => {
-    cd.style.backgroundColor = '#ff0000';
-  });
-  cd.addEventListener('click', () => {
-    var date = prompt(
-      'What would you like the upload date of the video to show?'
-    );
-    if (date !== null) {
-      const infoStringsChildren = document.getElementById('info-strings')
-        .children;
-      for (let i = 0; i < infoStringsChildren.length; i++) {
-        if (infoStringsChildren[i].tagName == 'YT-FORMATTED-STRING') {
-          infoStringsChildren[i].innerHTML = date;
-        }
-      }
-    }
-  });
-  cd.style =
-    'color: #ffffff; font-weight: bold; width: 250px; height: 25px; background-color: #ff0000; border-radius: 0px; border: 0px; cursor: pointer;';
-  cd.innerHTML = 'Change Upload Date';
-  if (window.location.href.indexOf('youtube.com/w') < 0) {
-    cd.disabled = true;
-    cd.style.cursor = 'not-allowed';
-    cd.style.backgroundColor = '#cc0000';
-    cd.style.color = '#cccccc';
-  }
-  document.getElementById('YT-TOOLS-font').appendChild(cd);
-
-  const close = document.createElement('button');
-  close.addEventListener('mouseover', () => {
-    close.style.backgroundColor = '#f10000';
-  });
-  close.addEventListener('mouseout', () => {
-    close.style.backgroundColor = '#ff0000';
-  });
-  close.addEventListener('click', () => {
-    document.getElementById('YT-TOOLS-menu').style.height = '0px';
-    setTimeout(() => {
-      document.getElementById('YT-TOOLS-menu').remove();
-    }, 100);
-  });
-  close.style =
-    'color: #ffffff; font-weight: bold; width: 250px; height: 25px; background-color: #ff0000; border-radius: 0px; border: 0px; cursor: pointer;';
-  close.innerHTML = 'Close';
-  document.getElementById('YT-TOOLS-font').appendChild(close);
-  console.log('Thank you for using YouTube Tools from Useless Tools!');
-}">YouTube Tools</a></b></font>
-          <h3>To add this to your bookmarks bar, drag the link to your bookmarks bar!</h3>
-          <p>"YouTube Tools" is fun tool to play around with YouTube.</p>
-        </center>
-      </div>
-      <div id="alertCreator" class="programBox">
-        <center>
-          <font size="5"><b><a id="alertCreatorJump" href="javascript:var x = prompt('What would you like the alert to say?'); if (x == null) {} else {alert(x);}">Alert Creator</a></b></font>
-          <h3>To add this to your bookmarks bar, drag the link to your bookmarks bar!</h3>
-          <p>"Alert Creator" is a tool made to create fake alerts and run them to make it look like the website alerted you with an alert.</p>
-        </center>
-      </div>
-      <div id="solidColors" class="programBox">
-        <center>
-          <font size="5"><b><a id="solidColorsJump" href="solidColors.html" target="_blank">Solid Colors</a></b></font>
+          <font size="5"><b><a href="solidColors.html" target="_blank">Solid Colors</a></b></font>
           <p>"Solid Colors" is a tool to use if you want your screen to be a solid color. Just make sure to turn on fullscreen mode (F11).</p>
         </center>
       </div>
-      <div id="encodeDecode" class="programBox">
+      <div class="programBox">
         <center>
-          <font size="5"><b><a id="encodeDecodeJump" href="javascript:var string = prompt('String?'); if (string !== null) {var eOd = prompt('Encode or Decode? (e or d)'); if (eOd == 'e') {alert(btoa(string));} else if (eOd == 'd') {alert(atob(string));}}">Encode/Decode Base64</a></b></font>
+          <font size="5"><b><a href="javascript:var string = prompt('String?'); if (string !== null) {var eOd = prompt('Encode or Decode? (e or d)'); if (eOd == 'e') {alert(btoa(string));} else if (eOd == 'd') {alert(atob(string));}}">Encode/Decode Base64</a></b></font>
           <h3>To add this to your bookmarks bar, drag the link to your bookmarks bar!</h3>
           <p>"Encode/Decode Base64" is a tool to use if you want to quickly encode or decode Base64.</p>
         </center>
       </div>
-      <div id="sendEmail" class="programBox">
+      <div class="programBox">
         <center>
-          <font size="5"><b><a id="sendEmailJump" href="javascript:var email = prompt('Who would you like to send an email to?'); if (email !== null) {window.open('mailto:' + email);}">Send Email</a></b></font>
+          <font size="5"><b><a href="javascript:var email = prompt('Who would you like to send an email to?'); if (email !== null) {window.open('mailto:' + email);}">Send Email</a></b></font>
           <h3>To add this to your bookmarks bar, drag the link to your bookmarks bar!</h3>
           <p>"Send Email" is a tool to use if you want to quickly send an email to someone.</p>
         </center>
       </div>
-      <div id="openTabs" class="programBox">
+      <div class="programBox">
         <center>
-          <font size="5"><b><a id="openTabsJump" href="javascript:var n = prompt('How many tabs do you want to open? (Any negative number returns infinite)'); if (n !== null) {if (!isNaN(n)) {if (n > 0) {for (let i = 0; i < n; i++) {window.open('https://google.com');}} else {if (n < 0) {for (let i = 0; i > -1; i++) {window.open('https://google.com');}}}}}">Open Tabs</a></b></font>
+          <font size="5"><b><a href="javascript:var n = prompt('How many tabs do you want to open? (Any negative number returns infinite)'); if (n !== null) {if (!isNaN(n)) {if (n > 0) {for (let i = 0; i < n; i++) {window.open('https://google.com');}} else {if (n < 0) {for (let i = 0; i > -1; i++) {window.open('https://google.com');}}}}}">Open Tabs</a></b></font>
           <h3>To add this to your bookmarks bar, drag the link to your bookmarks bar!</h3>
           <p>"Open Tabs" is a tool to use if you want to open a certain number of tabs. Just make sure to enable pop-ups on a chrome browser.</p>
         </center>
       </div>
-      <h2 class="white">My Links</h2>
-      <a href="https://www.youtube.com/channel/UCHZjnm4hjuLDOvfx99l8Ecg" target="_blank">YouTube</a>
-      <p></p>
-      <a href="https://www.roblox.com/users/290131238" target="_blank">Roblox</a>
     </div>
   </font>
 </body>
